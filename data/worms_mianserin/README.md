@@ -15,3 +15,6 @@ DOI: [10.7554/eLife.08833](http://dx.doi.org/10.7554/eLife.08833)
 * `annotated_cpm_values.tsv`: Contains annotated RNA-seq count per million (CPM) values for all samples.
     * Called `rnaseq-anno.raw` by Tristan.
     * This file is generated from `Q1_Sunitha_RNAseq_36samples_annotated.raw` by `clean_annotated_data.ipynb`.
+
+* `avg_annotated_cpm_values.tsv`: Contains annotated CPM values for all samples, with genes missing drift values in any sample removed in all samples. Drift and expression values are averaged across all batches.
+    * This file is generated from `annotated_cpm_values.tsv` by `average_annotated_data.ipynb`.
