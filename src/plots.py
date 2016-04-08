@@ -33,47 +33,38 @@ def plot_p_val_heatmap(data, group_cols, drift_col, **kwargs):
 
 
 @config_plot
-def plot_drift_raw(data, time_col, gene_col, drift_col, title = None, **kwargs):
-    """Plot the drift values of a group of individual genes.
+def plot_drift(kind, data, time_col, drift_col, gene_col, title = None,
+    groupby = None, **kwargs):
+    """Plot the drift values of a group of genes.
 
-    Recommend plotting no more than ~20 genes to avoid overloading the legend.
+    For line plots, plotting <= 20 genes is recommended in order to keep the
+    legend legible.
+
+    For boxplots, if a groupby column is provided, then paired boxplots will be
+    plotted.
     """
+    assert kind in ["line", "box"], "Incorrect figure type!"
+    assert isinstance(data, pd.DataFrame), "No dataframe provided!"
     MAX_GENES = 20
-    assert isinstance(data, pd.DataFrame), "No dataframe provided!"
-    if data[gene_col].nunique() > MAX_GENES:
-        warnings.warn("Plotting >{} genes is not recommended".format(MAX_GENES))
 
-    sub = data.pivot(index = time_col, columns = gene_col, values = drift_col)
+    if kind == "line":
+        if data[gene_col].nunique() > MAX_GENES:
+            warnings.warn("Plotting >{} genes is not recommended".format(MAX_GENES))
 
-    graph = sub.plot(kind = "line", title = title)
-    graph.set_ylabel("Drift value")
-    graph.legend(loc = "center left", bbox_to_anchor = (1, 0.5))
+        sub = data.pivot(index = time_col, columns = gene_col, values = drift_col)
 
-    graph.annotate(
-        r'$N = {}$'.format(data[gene_col].nunique()),
-        xy = (1, 1), xycoords = "axes fraction", fontsize = 16,
-        xytext = (5, -10), textcoords = "offset points",
-        ha = "left", va = "top"
-    )
+        fig = sub.plot(kind = "line")
+        fig.legend(loc = "center left", bbox_to_anchor = (1, 0.5))
+    else:
+        fig = sns.boxplot(
+            data = data, x = time_col, y = drift_col, showfliers = False,
+            hue = groupby
+        )
 
-    return graph
+    fig.set_title(title)
+    fig.set_ylabel("Drift value")
 
-
-@config_plot
-def plot_drift_box(data, time_col, drift_col, gene_col, groupby = None, **kwargs):
-    """Plot the drift values of a group of genes as a boxplot.
-
-    Different choices:
-    1. Single figure with one group
-    2. Paired boxplots across one figure
-    """
-    assert isinstance(data, pd.DataFrame), "No dataframe provided!"
-
-    fig = sns.boxplot(
-        data = data, x = time_col, y = drift_col, showfliers = False,
-        hue = groupby
-    )
-
+    # display number of unique genes plotted on the top right corner
     fig.annotate(
         r'$N = {}$'.format(data[gene_col].nunique()),
         xy = (1, 1), xycoords = "axes fraction", fontsize = 16,
@@ -83,13 +74,12 @@ def plot_drift_box(data, time_col, drift_col, gene_col, groupby = None, **kwargs
 
     return fig
 
-
 def plot_drift_split_box(data, time_col, drift_col, groupby):
     """Plot the drift values of a group of genes as a boxplot, split according
     to a factor.
     """
     # change to category to include missing groups
-    data.loc[:, time_col] = data[time_col].astype("category")
+    data.loc[:, time_col] = data.loc[:, time_col].astype("category")
     fig = sns.FacetGrid(data, col = groupby)
     fig = fig.map(sns.boxplot, time_col, drift_col, showfliers = False)
     return fig
