@@ -1,11 +1,14 @@
 """Functions for creating transcriptional drift plots."""
-
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import warnings
 
-from .stats import p_val_matrix
+from matplotlib.patches import Circle
+from matplotlib.collections import PatchCollection
+
+from .stats import p_val_pairs
 
 def config_plot(func):
     """Configures parameters for a plot locally.
@@ -22,12 +25,47 @@ def config_plot(func):
 
 
 @config_plot
-def plot_p_val_heatmap(data, group_cols, drift_col, **kwargs):
-    """Create a heatmap of Levene's test p-values between all group pairs."""
-    p_vals = p_val_matrix(data, group_cols, drift_col)
+def plot_p_val_heatmap(data, group_cols, drift_col, circles = False, **kwargs):
+    """Create a heatmap of Levene's test p-values between all group pairs.
 
-    fig = sns.heatmap(p_vals, annot = True, square = True, linewidths = 0.5)
+    Optional: add a small circular indicator showing which of the two groups has
+    the larger variance.
+
+    Circle location:
+        Upper left corner: row label has larger variance.
+        Bottom right corner: column label has larger variance.
+    """
+    def get_center(grpA, grpB, bigger):
+        """Return the center of the dot.
+
+        On the heatmap, the bottom left corner is (0, 0), and the top right
+        corner is (N, N), where N is the number of unique groups.
+        """
+        offset = 0.1
+        delta = (1 - offset, offset) if bigger else (offset, 1 - offset)
+        return (idx[grpA] + delta[0], N - 1 - idx[grpB] + delta[1])
+
+    # get the p values and the unique groups (sorted)
+    p_vals, groups = p_val_pairs(data, group_cols, drift_col, get_groups = True)
+
+    matrix = pd.DataFrame(index = groups, columns = groups, dtype = np.float)
+    for (i, j), (p_val, bigger) in p_vals.items():
+        matrix.loc[i, j] = p_val
+
+    fig = sns.heatmap(matrix.T, annot = True, square = True, linewidths = 0.5)
     fig.set_title("Levene's p-value for every pairwise group")
+
+    if circles:
+        N = len(groups)
+        idx = {label: i for i, label in enumerate(groups)}
+
+        radius = 0.05
+        circles = [
+            Circle(get_center(i, j, bigger), radius)
+            for (i, j), (p_val, bigger) in p_vals.items()
+        ]
+
+        fig.add_collection(PatchCollection(circles))
 
     return fig
 
