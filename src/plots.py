@@ -121,3 +121,11 @@ def plot_drift_split_box(data, time_col, drift_col, groupby):
     fig = sns.FacetGrid(data, col = groupby)
     fig = fig.map(sns.boxplot, time_col, drift_col, showfliers = False)
     return fig
+
+
+@config_plot
+def plot_multi_density(data, idx_col, groupby, val_col, **kwargs):
+    """Plot multiple density distributions."""
+    temp = data.pivot(index = idx_col, columns = groupby, values = val_col)
+    fig = temp.plot(kind = "density")
+    return fig
