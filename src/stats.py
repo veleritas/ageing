@@ -1,33 +1,29 @@
-"""Statistical functions for analyzing drift data."""
-
-import numpy as np
-import pandas as pd
-import seaborn as sns
+"""Statistical functions for analyzing drift."""
 
 from itertools import combinations
 from scipy.stats import levene
 
-def p_val_matrix(data, group_cols, drift_col):
+def p_val_pairs(data, group_cols, drift_col, get_groups = False):
     """Calculate the Levene's test p-value for each unique pair of groups.
 
-    Only calculates the lower left triangle.
+    Also calculates whether the first group has a larger variance than the
+    second group. Does not calculate for all pairs!
+
+    Returns:
+        res[(groupA, groupB)] = (p-value, var(groupA) > var(groupB))
+
+        and the unique groups in sorted order
     """
-    drift = {
-        key: df[drift_col]
-        for key, df in data.groupby(group_cols)
-    }
+    drift = {key: df[drift_col] for key, df in data.groupby(group_cols)}
 
     groups = sorted(list(drift.keys()))
-    temp = pd.DataFrame(index = groups, columns = groups, dtype = np.float)
 
-    for i, j in combinations(groups, 2):
-        temp.loc[i, j] = levene(drift[i], drift[j], center = "median")[1]
+    p_vals = {
+        (i, j): (
+            levene(drift[i], drift[j], center = "median")[1],
+            drift[i].var() > drift[j].var()
+        )
+        for i, j in combinations(groups, 2)
+    }
 
-    return temp.T
-
-def plot_p_val_heatmap(data, group_cols, drift_col):
-    p_vals = p_val_matrix(data, group_cols, drift_col)
-
-    fig = sns.heatmap(p_vals, annot = True, square = True, linewidths = 0.5)
-    fig.set_title("Levene's p-value for every pairwise group")
-    return fig
+    return (p_vals, groups) if get_groups else p_vals
