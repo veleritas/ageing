@@ -9,6 +9,11 @@ Tong Shu Li ([Su Lab](http://sulab.org)) and Michael Petrascheck ([Lab Website](
 1. Create a virtual environment: `pyvenv venv`
 2. Install dependencies with `pip`: `pip3 install -r requirements.txt`
 
+## Running Notebooks
+
+1. Start the virtual environment: `source venv/bin/activate`
+2. Start the Jupyter server: `jupyter notebook`
+
 ## Directory Contents
 
 - `data`: Data storage directory. Also contains simple scripts used to clean
