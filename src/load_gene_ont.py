@@ -5,7 +5,15 @@ from collections import defaultdict
 from .util import read_file
 
 def load_go(floc):
-    """For now only works for the worm gene ontology data."""
+    """Read the Gene Ontology annotations for this organism."""
+    def num_skip(fname):
+        """Count the number of lines to skip at the head of a Gene Ontology file."""
+        for i, line in enumerate(read_file(fname)):
+            if not line.startswith("!"):
+                return i
+
+        raise Exception("File only contained comments!")
+
     columns = [
         "database",
         "database_id",
@@ -26,9 +34,10 @@ def load_go(floc):
         "gene_prod_id"
     ]
 
-    data = pd.read_csv(floc, sep = '\t', skiprows = 25, names = columns)
-    data = data.drop("database", axis = 1) # redundant column
-    return data
+    nskip = num_skip(floc)
+
+    data = pd.read_csv(floc, sep = '\t', skiprows = nskip, names = columns)
+    return data.drop("database", axis = 1) # redundant column
 
 def parse_go_defn(floc):
     """Return a dataframe of the GO term and its name."""
