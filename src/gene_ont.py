@@ -6,6 +6,7 @@ from collections import defaultdict
 
 from .util import read_file
 
+
 def extract_go_id(s):
     """Extract the first Gene Ontology ID from a string.
 
@@ -14,6 +15,40 @@ def extract_go_id(s):
     res = re.search(r'GO:\d{7}', s)
     assert res is not None, "No GO id found in {}".format(s)
     return res.group()
+
+
+def parse_go_links(floc):
+    """Determine the relationship edges of the Gene Ontology."""
+
+    def extract_edge(s):
+        """Extract the edge type and target GO term from a string."""
+        assert s.startswith("is_a") or s.startswith("relationship"), "Bad edge string"
+
+        dest = extract_go_id(s)
+        if s.startswith("is_a"):
+            return ("is_a", dest)
+
+        return (s[s.find(" ") + 1 : s.find("GO:") - 1], dest)
+
+    #---------------------------------------------------------------------------
+
+    file_gen = read_file(floc)
+
+    links = defaultdict(lambda: defaultdict(set))
+    for line in file_gen:
+        if line == "[Term]":
+            go_id = extract_go_id(next(file_gen))
+
+            for sub in file_gen:
+                if not sub:
+                    break
+
+                if sub.startswith("is_a") or sub.startswith("relationship"):
+                    edge, dest = extract_edge(sub)
+                    links[go_id][edge].add(dest)
+
+    return links
+
 
 def load_annotations(floc):
     """Read the Gene Ontology annotations for this organism."""
@@ -49,6 +84,7 @@ def load_annotations(floc):
 
     data = pd.read_csv(floc, sep = '\t', skiprows = nskip, names = columns)
     return data.drop("database", axis = 1) # redundant column
+
 
 def parse_go_defn(floc):
     """Read the go.obo file and return a dataframe with four columns:
