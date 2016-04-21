@@ -15,7 +15,7 @@ def extract_go_id(s):
     assert res is not None, "No GO id found in {}".format(s)
     return res.group()
 
-def load_go(floc):
+def load_annotations(floc):
     """Read the Gene Ontology annotations for this organism."""
     def num_skip(fname):
         """Count the number of lines to skip at the head of a Gene Ontology file."""
