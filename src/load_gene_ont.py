@@ -1,8 +1,19 @@
 """Load the Gene Ontology."""
 import pandas as pd
+import re
+
 from collections import defaultdict
 
 from .util import read_file
+
+def extract_go_id(s):
+    """Extract the first Gene Ontology ID from a string.
+
+    Assumes that the string contains a GO id.
+    """
+    res = re.search(r'GO:\d{7}', s)
+    assert res is not None, "No GO id found in {}".format(s)
+    return res.group()
 
 def load_go(floc):
     """Read the Gene Ontology annotations for this organism."""
