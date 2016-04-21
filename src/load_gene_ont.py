@@ -40,19 +40,30 @@ def load_go(floc):
     return data.drop("database", axis = 1) # redundant column
 
 def parse_go_defn(floc):
-    """Return a dataframe of the GO term and its name."""
+    """Read the go.obo file and return a dataframe with four columns:
+
+    id: the GO id
+    name: the name of the GO term
+    namespace: one of [biological_process, molecular_function, cellular_component]
+    obsolete: a boolean
+    """
     res = defaultdict(list)
 
-    file_gen = read_file(floc)
-    for line in file_gen:
+    gen = read_file(floc)
+    for line in gen:
         if line == "[Term]":
-            uid = next(file_gen)
-            name = next(file_gen)
+            obsolete = False
+            for sub in gen:
+                if not sub:
+                    break
 
-            assert uid.startswith("id: GO:"), "Bad id for {}".format(uid)
-            assert name.startswith("name: "), "Bad name for {}".format(name)
+                idx = sub.find(":")
+                key = sub[: idx]
+                if key in ["id", "name", "namespace"]:
+                    res[key].append(sub[idx + 2 :])
+                elif key == "is_obsolete":
+                    obsolete = True
 
-            res["go_id"].append(uid[4:])
-            res["go_name"].append(name[6:])
+            res["obsolete"].append(obsolete)
 
-    return pd.DataFrame(res)
+    return pd.DataFrame(res).rename(columns = {"id": "go_id", "name": "go_name"})
