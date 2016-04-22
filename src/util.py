@@ -1,6 +1,10 @@
 """Miscellaneous helper functions."""
 
+import operator
 import pandas as pd
+
+from functools import reduce
+
 
 def read_file(floc):
     with open(floc, "r") as fin:
@@ -14,3 +18,7 @@ def subset(conditions, data):
 
     temp = pd.DataFrame(conditions, columns = list(conditions.keys()))
     return pd.merge(temp, data, how = "left", on = list(conditions.keys()))
+
+def union(v):
+    """Return the union of a list or tuple of sets."""
+    return reduce(operator.or_, v)
