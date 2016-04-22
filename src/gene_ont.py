@@ -5,6 +5,7 @@ import re
 from collections import defaultdict
 
 from .util import read_file
+from .util import union
 
 
 def extract_go_id(s):
@@ -48,6 +49,33 @@ def parse_go_links(floc):
                     links[go_id][edge].add(dest)
 
     return links
+
+
+def link_info(links):
+    """Given the adjacency list of the Gene Ontology, traverses the DAG to find
+    the nodes which can be reached from each starting term, and the terms which
+    can reach a specific term.
+    """
+    def reach(cur): # dfs
+        """Return the set of all nodes reachable from current node."""
+        if not links[cur]["is_a"]:
+            return set([cur])
+
+        return set([cur]) | union(reach(dest) for dest in links[cur]["is_a"])
+
+    terms = set(links.keys())
+
+    # which nodes can be reached from each node?
+    # doesn't include the three root nodes!
+    reachable_from = {term: reach(term) for term in terms}
+
+    # which nodes can travel to this node?
+    can_reach = defaultdict(set)
+    for term, dests in reachable_from.items():
+        for dest in dests:
+            can_reach[dest].add(term)
+
+    return (reachable_from, can_reach)
 
 
 def load_annotations(floc):
