@@ -20,5 +20,8 @@ def subset(conditions, data):
     return pd.merge(temp, data, how = "left", on = list(conditions.keys()))
 
 def union(v):
-    """Return the union of a list or tuple of sets."""
-    return reduce(operator.or_, v)
+    """Return the union of an iterable of sets.
+
+    If the iterable is empty, returns an empty set().
+    """
+    return reduce(operator.or_, v, set())
