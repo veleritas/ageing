@@ -19,12 +19,18 @@ def extract_go_id(s):
 
 
 def parse_go_links(floc):
-    """Determine the relationship edges of the Gene Ontology."""
+    """Extract the edges relating terms in the Gene Ontology.
+
+    Returns the direct children of each node. All edges in the DAG are flipped.
+
+    The three root nodes are:
+        GO:0003674 molecular_function
+        GO:0005575 cellular_component
+        GO:0008150 biological_process
+    """
 
     def extract_edge(s):
         """Extract the edge type and target GO term from a string."""
-        assert s.startswith("is_a") or s.startswith("relationship"), "Bad edge string"
-
         dest = extract_go_id(s)
         if s.startswith("is_a"):
             return ("is_a", dest)
@@ -35,7 +41,7 @@ def parse_go_links(floc):
 
     file_gen = read_file(floc)
 
-    links = defaultdict(lambda: defaultdict(set))
+    children = defaultdict(lambda: defaultdict(set))
     for line in file_gen:
         if line == "[Term]":
             go_id = extract_go_id(next(file_gen))
@@ -45,41 +51,50 @@ def parse_go_links(floc):
                     break
 
                 if sub.startswith("is_a") or sub.startswith("relationship"):
+                    # edge: go_id --- edge_type ---> dest
                     edge, dest = extract_edge(sub)
-                    links[go_id][edge].add(dest)
 
-    return links
+                    children[dest][edge].add(go_id)
+
+    return children
 
 
-def link_info(links):
-    """Given the adjacency list of the Gene Ontology, traverses the DAG to find
-    the nodes which can be reached from each starting term, and the terms which
-    can reach a specific term.
+def group_genes(children, annots, edge_types):
+    """Given the direct children of each GO term and the genes annotated with
+    each GO term, determines the genes related to each GO term using the GO
+    hierarchy.
+
+    Args:
+        children: a defaultdict of defaultdict of set containing the direct
+            children of each GO term
+        annots: a defaultdict of set containing the genes annotated with each GO
+            term
+        edge_types: a list of types of edges to consider
     """
-    def reach(cur): # dfs
-        """Return the set of all nodes reachable from current node."""
-        if not links[cur]["is_a"]:
-            return set([cur])
+    cache = defaultdict(set)
 
-        return set([cur]) | union(reach(dest) for dest in links[cur]["is_a"])
+    def combine(node):
+        """Combine the nodes of multiple edge types into one set."""
+        return union(children[node][edge] for edge in edge_types)
 
-    terms = set(links.keys())
+    def dfs(cur):
+        cache[cur] = union(
+            cache[child] if child in cache else dfs(child)
+            for child in combine(cur)
+        ) | annots[cur]
 
-    # which nodes can be reached from each node?
-    # doesn't include the three root nodes!
-    reachable_from = {term: reach(term) for term in terms}
+        return cache[cur]
 
-    # which nodes can travel to this node?
-    can_reach = defaultdict(set)
-    for term, dests in reachable_from.items():
-        for dest in dests:
-            can_reach[dest].add(term)
+    roots = ['GO:0003674', 'GO:0005575', 'GO:0008150']
+    for root in roots:
+        dfs(root)
 
-    return (reachable_from, can_reach)
+    return cache
 
 
 def load_annotations(floc):
-    """Read the Gene Ontology annotations for this organism."""
+    """Load a specific Gene Ontology annotation file."""
+
     def num_skip(fname):
         """Count the number of lines to skip at the head of a Gene Ontology file."""
         for i, line in enumerate(read_file(fname)):
@@ -88,6 +103,7 @@ def load_annotations(floc):
 
         raise Exception("File only contained comments!")
 
+    # http://geneontology.org/page/go-annotation-file-gaf-format-21
     columns = [
         "database",
         "database_id",
@@ -117,8 +133,8 @@ def load_annotations(floc):
 def parse_go_defn(floc):
     """Read the go.obo file and return a dataframe with four columns:
 
-    id: the GO id
-    name: the name of the GO term
+    go_id: the GO id
+    go_name: the name of the GO term
     namespace: one of [biological_process, molecular_function, cellular_component]
     obsolete: a boolean
     """
@@ -142,3 +158,17 @@ def parse_go_defn(floc):
             res["obsolete"].append(obsolete)
 
     return pd.DataFrame(res).rename(columns = {"id": "go_id", "name": "go_name"})
+
+
+def filter_go(go_terms, go_groups, dataframe, id_col):
+    """Filters a dataframe of genes down to those which are annotated with a
+    group of GO terms.
+
+    :param go_terms: an iterable of strings representing the relevant GO terms
+    :param go_groups: a dictionary of go_term: set(gene ids) that describe which
+        genes are annotated with each GO term
+    :param dataframe: the dataframe containing genes we want to subset
+    """
+    genes = union(go_groups[term] for term in go_terms)
+    temp = pd.DataFrame({id_col: list(genes)})
+    return pd.merge(temp, dataframe, how = "left", on = id_col)
