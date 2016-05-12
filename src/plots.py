@@ -124,6 +124,12 @@ def plot_drift_split_box(data, time_col, drift_col, groupby):
 
 
 @config_plot
+def pointplot(data, x, y, hue, **kwargs):
+    """A wrapper around Seaborn's pointplot allowing figure size control."""
+    return sns.pointplot(data = data, x = x, y = y, hue = hue, **kwargs)
+
+
+@config_plot
 def plot_multi_density(data, groupby, val_col, **kwargs):
     """Plot multiple density distributions.
 
