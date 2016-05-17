@@ -6,15 +6,21 @@ DOI: [10.7554/eLife.08833](http://dx.doi.org/10.7554/eLife.08833)
 ---
 
 ## File Contents
-* `sample_metadata.tsv`: Contains the treatment condition information for each RNA-seq sample.
 
-* `all_samples_cpm.tsv`: Contains the raw RNA-seq counts per million for each of 19619 genes. Converted from the Excel file `all-sample-cpm.xlsx`. Called `rnaseq-std.raw` by Tristan.
+### Original Raw Data
+
+- `Q1_Sunitha_RNAseq_36samples_annotated.raw`: Annotated count per million (CPM) expression values provided by Michael.
+
+- `all_samples_cpm.tsv`: Contains the raw RNA-seq counts per million for each of 19619 genes. Converted from the Excel file `all-sample-cpm.xlsx`. Called `rnaseq-std.raw` by Tristan.
     * Column names: Batch #, Sample # (12 samples of 3 batches each)
     * See `sample_metadata.tsv` for the treatment conditions of each sample.
 
-* `annotated_cpm_values.tsv`: Contains annotated RNA-seq count per million (CPM) values for all samples.
-    * Called `rnaseq-anno.raw` by Tristan.
-    * This file is generated from `Q1_Sunitha_RNAseq_36samples_annotated.raw` by `clean_annotated_data.ipynb`.
+### Processing Scripts
 
-* `avg_annotated_cpm_values.tsv`: Contains annotated CPM values for all samples, with genes missing drift values in any sample removed in all samples. Drift and expression values are averaged across all batches.
-    * This file is generated from `annotated_cpm_values.tsv` by `average_annotated_data.ipynb`.
+- `clean_annotated_data.ipynb`: Processes `Q1_Sunitha_RNAseq_36samples_annotated.raw` and removes genes without relative log fold expression changes. Produces two output files:
+    1. `clean_annotated_cpm_values.tsv`: the expression values of each biological replicate are kept separate, resulting in 36 total samples.
+    2. `avg_annotated_cpm_values.tsv`: the expression values for each gene are averaged together across biological replicates, resulting in 12 samples.
+
+### Metadata
+
+- `sample_metadata.tsv`: Contains the treatment condition information for each RNA-seq sample.
