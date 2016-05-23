@@ -124,8 +124,21 @@ def plot_drift_split_box(data, time_col, drift_col, groupby):
 
 
 @config_plot
-def plot_multi_density(data, idx_col, groupby, val_col, **kwargs):
-    """Plot multiple density distributions."""
-    temp = data.pivot(index = idx_col, columns = groupby, values = val_col)
-    fig = temp.plot(kind = "density")
-    return fig
+def pointplot(data, x, y, hue, **kwargs):
+    """A wrapper around Seaborn's pointplot allowing figure size control."""
+    return sns.pointplot(data = data, x = x, y = y, hue = hue, **kwargs)
+
+
+@config_plot
+def plot_multi_density(data, groupby, val_col, **kwargs):
+    """Plot multiple density distributions.
+
+    Each group can have different sample sizes.
+    """
+    fig, ax = plt.subplots()
+    for key, df in data.groupby(groupby):
+        ax = sns.kdeplot(df[val_col], label = key, ax = ax)
+
+    ax.set_ylabel("Density")
+    ax.legend(title = groupby, loc = "center left", bbox_to_anchor = (1, 0.5))
+    return ax
