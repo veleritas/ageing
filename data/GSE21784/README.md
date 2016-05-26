@@ -1,8 +1,8 @@
 # Data Files for *A decline in p38 MAPK signaling underlies immunosenescence in Caenorhabditis elegans*
 
-PMID: [21625567](http://www.ncbi.nlm.nih.gov/pubmed/21625567)
-DOI: [10.1371/journal.pgen.1002082](http://dx.doi.org/10.1371/journal.pgen.1002082)
-GEO: [GSE21784](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE21784)
+**PMID**: [21625567](http://www.ncbi.nlm.nih.gov/pubmed/21625567)
+**DOI**: [10.1371/journal.pgen.1002082](http://dx.doi.org/10.1371/journal.pgen.1002082)
+**GEO**: [GSE21784](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE21784)
 
 ---
 
@@ -11,6 +11,7 @@ GEO: [GSE21784](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE21784)
 ### Raw Data
 
 - `GSE21784_series_matrix.txt`: The original raw gene expression data as downloaded from the Gene Ontology Omnibus.
+    - Retrieved on 2016-05-19 from [GEO](ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE21nnn/GSE21784/matrix/GSE21784_series_matrix.txt.gz)
 
 ### Processing Scripts
 
