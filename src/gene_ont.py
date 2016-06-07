@@ -1,4 +1,4 @@
-"""Load the Gene Ontology."""
+"""Utilities for processing the Gene Ontology."""
 import pandas as pd
 import re
 
@@ -16,80 +16,6 @@ def extract_go_id(s):
     res = re.search(r'GO:\d{7}', s)
     assert res is not None, "No GO id found in {}".format(s)
     return res.group()
-
-
-def parse_go_links(floc):
-    """Extract the edges relating terms in the Gene Ontology.
-
-    Returns the direct children of each node. All edges in the DAG are flipped.
-
-    The three root nodes are:
-        GO:0003674 molecular_function
-        GO:0005575 cellular_component
-        GO:0008150 biological_process
-    """
-
-    def extract_edge(s):
-        """Extract the edge type and target GO term from a string."""
-        dest = extract_go_id(s)
-        if s.startswith("is_a"):
-            return ("is_a", dest)
-
-        return (s[s.find(" ") + 1 : s.find("GO:") - 1], dest)
-
-    #---------------------------------------------------------------------------
-
-    file_gen = read_file(floc)
-
-    children = defaultdict(lambda: defaultdict(set))
-    for line in file_gen:
-        if line == "[Term]":
-            go_id = extract_go_id(next(file_gen))
-
-            for sub in file_gen:
-                if not sub:
-                    break
-
-                if sub.startswith("is_a") or sub.startswith("relationship"):
-                    # edge: go_id --- edge_type ---> dest
-                    edge, dest = extract_edge(sub)
-
-                    children[dest][edge].add(go_id)
-
-    return children
-
-
-def group_genes(children, annots, edge_types):
-    """Given the direct children of each GO term and the genes annotated with
-    each GO term, determines the genes related to each GO term using the GO
-    hierarchy.
-
-    Args:
-        children: a defaultdict of defaultdict of set containing the direct
-            children of each GO term
-        annots: a defaultdict of set containing the genes annotated with each GO
-            term
-        edge_types: a list of types of edges to consider
-    """
-    cache = defaultdict(set)
-
-    def combine(node):
-        """Combine the nodes of multiple edge types into one set."""
-        return union(children[node][edge] for edge in edge_types)
-
-    def dfs(cur):
-        cache[cur] = union(
-            cache[child] if child in cache else dfs(child)
-            for child in combine(cur)
-        ) | annots[cur]
-
-        return cache[cur]
-
-    roots = ['GO:0003674', 'GO:0005575', 'GO:0008150']
-    for root in roots:
-        dfs(root)
-
-    return cache
 
 
 def load_annotations(floc):
@@ -149,6 +75,97 @@ def parse_go_defn(floc):
             res["obsolete"].append(obsolete)
 
     return pd.DataFrame(res).rename(columns = {"id": "go_id", "name": "go_name"})
+
+
+def parse_go_links(floc):
+    """Extract the edges relating terms in the Gene Ontology.
+
+    The Gene Ontology is a DAG. Each GO term points to the terms which are above
+    it on the hierarchy. A single GO term may have multiple parents. Starting at
+    each term and following the edges upwards, one will always arrive at the
+    three root nodes:
+        GO:0003674 molecular_function
+        GO:0005575 cellular_component
+        GO:0008150 biological_process
+
+    For our purposes we want to know the children of each GO term, so that we
+    can determine which gene annotations belong to each term. This function
+    returns the direct children of each node as an adjacency list. All edges in
+    the DAG are flipped from their original orientation (edges are from parent
+    to child).
+    """
+
+    def extract_edge(s):
+        """Extract the edge type and target GO term from a string."""
+        dest = extract_go_id(s)
+        if s.startswith("is_a"):
+            return ("is_a", dest)
+
+        return (s[s.find(" ") + 1 : s.find("GO:") - 1], dest)
+
+    #---------------------------------------------------------------------------
+
+    file_gen = read_file(floc)
+
+    children = defaultdict(lambda: defaultdict(set))
+    for line in file_gen:
+        if line == "[Term]":
+            go_id = extract_go_id(next(file_gen))
+
+            for sub in file_gen:
+                if not sub:
+                    break
+
+                if sub.startswith("is_a") or sub.startswith("relationship"):
+                    # edge: go_id --- edge_type ---> dest
+                    edge, dest = extract_edge(sub)
+
+                    children[dest][edge].add(go_id)
+
+    return children
+
+
+def group_genes(children, annots, edge_types):
+    """Determine the genes associated with each GO term, taking into account the
+    GO hierarchy.
+
+    The GO term for each gene annotation is usually as specific as possible.
+    This results in many GO terms with no direct gene associations. Since more
+    general GO terms encompass more specific terms by virtue of the GO hierarchy,
+    the gene associations should also be propagated upwards.
+
+    Given the direct children of each GO term and the genes annotated with
+    each GO term, determines the genes related to each GO term using the GO
+    hierarchy.
+
+    Args:
+        children: a defaultdict of defaultdict of set containing the direct
+            children of each GO term
+        annots: a defaultdict of set containing the genes annotated with each GO
+            term
+        edge_types: a list of types of edges to consider
+    """
+    assert isinstance(annots, defaultdict), "Annotations should be a defaultdict"
+
+    cache = defaultdict(set)
+
+    def combine(node):
+        """Combine the nodes of multiple edge types into one set."""
+        return union(children[node][edge] for edge in edge_types)
+
+    def dfs(cur):
+        cache[cur] = union(
+            cache[child] if child in cache else dfs(child)
+            for child in combine(cur)
+        ) | annots[cur]
+
+        return cache[cur]
+
+    roots = ['GO:0003674', 'GO:0005575', 'GO:0008150']
+    for root in roots:
+        dfs(root)
+
+    return cache
 
 
 def filter_go(go_terms, go_groups, dataframe, id_col):
