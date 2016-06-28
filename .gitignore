@@ -6,3 +6,4 @@ venv/
 
 data/random/random_expset.tsv
 data/PMID26623667/rand_sampling/genesets/
+data/PMID26623667/rand_sampling/models/
