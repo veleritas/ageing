@@ -1,5 +1,6 @@
 """Miscellaneous helper functions."""
 
+import json
 import operator
 import pandas as pd
 
@@ -10,6 +11,10 @@ def read_file(floc):
     with open(floc, "r") as fin:
         for line in fin:
             yield line.rstrip("\n")
+
+def load_json(floc):
+    with open(floc, "r") as fin:
+        return json.load(fin)
 
 def subset(conditions, data):
     """Subset a dataframe according to a dictionary of conditions."""
