@@ -3,3 +3,5 @@ __pycache__/
 venv/
 .*.swp
 .Rhistory
+
+data/random/random_expset.tsv
