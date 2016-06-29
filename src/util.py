@@ -1,5 +1,7 @@
 """Miscellaneous helper functions."""
 
+import json
+import multiprocessing as mp
 import operator
 import pandas as pd
 
@@ -10,6 +12,10 @@ def read_file(floc):
     with open(floc, "r") as fin:
         for line in fin:
             yield line.rstrip("\n")
+
+def load_json(floc):
+    with open(floc, "r") as fin:
+        return json.load(fin)
 
 def subset(conditions, data):
     """Subset a dataframe according to a dictionary of conditions."""
@@ -25,3 +31,13 @@ def union(v):
     If the iterable is empty, returns an empty set().
     """
     return reduce(operator.or_, v, set())
+
+def calc_parallel(function, units):
+    """Apply the function in parallel to a list of work units (parameters).
+
+    Returns results as a generator so that progress can be monitored.
+    """
+    num_cpus = mp.cpu_count()
+    with mp.Pool(num_cpus) as pool:
+        for res in pool.imap(function, units):
+            yield res
