@@ -1,0 +1,300 @@
+set_name	wormbase_id	gene_symbol	seqname
+control	WBGene00001022	dnj-4	C01G8.4
+control	WBGene00010803	M01B2.10	M01B2.10
+control	WBGene00019326	K02F3.2	K02F3.2
+control	WBGene00002299	let-23	ZK1067.1
+control	WBGene00011920	T22C1.11	T22C1.11
+control	WBGene00018781	F54A3.2	F54A3.2
+control	WBGene00003384	moc-1	T06H11.4
+control	WBGene00011067	vps-11	R06F6.2
+control	WBGene00003621	nhr-22	K06A1.4
+control	WBGene00010552	K04C1.2	K04C1.2
+defense response to bacterium	WBGene00000013	abf-2	C50F2.10
+defense response to bacterium	WBGene00000169	aqp-1	F32A5.5
+defense response to bacterium	WBGene00000223	atf-7	C07G2.2
+defense response to bacterium	WBGene00000522	clc-1	C09F12.1
+defense response to bacterium	WBGene00044719	clec-172	K03H6.7
+defense response to bacterium	WBGene00020938	clec-218	W02D7.2
+defense response to bacterium	WBGene00009291	clec-264	F31D4.4
+defense response to bacterium	WBGene00017364	clec-7	F10G2.3
+defense response to bacterium	WBGene00009226	cyp-37B1	F28G4.1
+defense response to bacterium	WBGene00012019	dkf-2	T25E12.4
+defense response to bacterium	WBGene00010125	dod-22	F55G11.5
+defense response to bacterium	WBGene00001250	elt-2	C33D3.1
+defense response to bacterium	WBGene00015981	elt-7	C18G1.2
+defense response to bacterium	WBGene00001692	grd-3	W05E7.1
+defense response to bacterium	WBGene00016669	ilys-2	C45G7.2
+defense response to bacterium	WBGene00016783	irg-2	C49G7.5
+defense response to bacterium	WBGene00002981	lgg-2	ZK593.6
+defense response to bacterium	WBGene00003094	lys-5	F58B3.2
+defense response to bacterium	WBGene00017123	maoc-1	E04F6.3
+defense response to bacterium	WBGene00004096	pqm-1	F40F8.7
+defense response to bacterium	WBGene00004196	prx-11	C47B2.8
+defense response to bacterium	WBGene00004758	sek-1	R03G5.2
+defense response to bacterium	WBGene00004809	skr-3	F44G3.6
+defense response to bacterium	WBGene00004990	spp-5	T08A9.9
+defense response to bacterium	WBGene00009213	thn-1	F28D1.3
+defense response to bacterium	WBGene00006593	tol-1	C07F11.1
+defense response to bacterium	WBGene00019327	zip-2	K02F3.4
+response to radiation	WBGene00000227	atm-1	Y48G1BL.2
+response to radiation	WBGene00000235	baf-1	B0464.7
+response to radiation	WBGene00000373	cyp-14A5	F08F3.7
+response to radiation	WBGene00000467	cep-1	F52B5.5
+response to radiation	WBGene00000803	csb-1	F53H4.1
+response to radiation	WBGene00001803	lite-1	C14F11.3
+response to radiation	WBGene00001860	him-1	F28B3.7
+response to radiation	WBGene00001997	hpr-9	Y39A1A.23
+response to radiation	WBGene00002275	lem-2	W01G7.5
+response to radiation	WBGene00003418	msh-2	H26D21.2
+response to radiation	WBGene00003422	msh-6	Y47G6A.11
+response to radiation	WBGene00003582	dcap-2	F52G2.1
+response to radiation	WBGene00004051	pme-3	F20C5.1
+response to radiation	WBGene00006963	xpa-1	K07G5.2
+response to radiation	WBGene00008665	ercc-1	F10G8.7
+response to radiation	WBGene00010659	K08D8.5	K08D8.5
+response to radiation	WBGene00011668	clec-47	T09F5.9
+response to radiation	WBGene00015943	tiar-1	C18A3.5
+response to radiation	WBGene00021929	dcap-1	Y55F3AM.12
+response to topologically incorrect protein	WBGene00000034	abu-11	T01D1.6
+response to topologically incorrect protein	WBGene00000190	arf-1.1	F45E4.1
+response to topologically incorrect protein	WBGene00000222	atf-6	F45E6.2
+response to topologically incorrect protein	WBGene00001037	dnj-19	T05C3.5
+response to topologically incorrect protein	WBGene00001811	haf-1	C30H6.6
+response to topologically incorrect protein	WBGene00002004	hsf-1	Y53C10A.12
+response to topologically incorrect protein	WBGene00002008	hsp-4	F43E2.8
+response to topologically incorrect protein	WBGene00002015	hsp-16.1	T27E4.8
+response to topologically incorrect protein	WBGene00002019	hsp-16.48	T27E4.3
+response to topologically incorrect protein	WBGene00002025	hsp-60	Y22D7AL.5
+response to topologically incorrect protein	WBGene00002026	hsp-70	C12C8.1
+response to topologically incorrect protein	WBGene00002147	ire-1	C41C4.4
+response to topologically incorrect protein	WBGene00003870	ooc-5	C18E9.11
+response to topologically incorrect protein	WBGene00004015	phb-2	T24H7.1
+response to topologically incorrect protein	WBGene00006734	ufd-2	T05H10.5
+response to topologically incorrect protein	WBGene00012757	Y41C4A.11	Y41C4A.11
+response to topologically incorrect protein	WBGene00013591	gcn-2	Y81G3A.3
+response to topologically incorrect protein	WBGene00013878	atfs-1	ZC376.7
+response to topologically incorrect protein	WBGene00014172	clpp-1	ZK970.2
+response to topologically incorrect protein	WBGene00018259	F41B4.3	F41B4.3
+glycolisis	WBGene00016810	C50D2.7	C50D2.7
+glycolisis	WBGene00008230	C50F4.2	C50F4.2
+glycolisis	WBGene00017060	D2063.1	D2063.1
+glycolisis	WBGene00008780	F14B4.2	F14B4.2
+glycolisis	WBGene00019001	F57B10.3	F57B10.3
+glycolisis	WBGene00011474	aldo-1	T05D4.1
+glycolisis	WBGene00000107	alh-1	F54D8.3
+glycolisis	WBGene00000115	alh-9	F01F1.6
+glycolisis	WBGene00009082	dlat-1	F23B12.5
+glycolisis	WBGene00010794	dld-1	LLC1.3
+glycolisis	WBGene00001404	fbp-1	K07A3.1
+glycolisis	WBGene00013597	gpi-1	Y87G2A.8
+glycolisis	WBGene00002262	ldh-1	F13D12.2
+glycolisis	WBGene00021043	pck-1	W05G11.6
+glycolisis	WBGene00011510	pdha-1	T05H10.6
+glycolisis	WBGene00015413	pdhb-1	C04C3.3
+glycolisis	WBGene00020185	pgk-1	T03F1.3
+glycolisis	WBGene00009126	pyk-1	F25H5.3
+glycolisis	WBGene00014001	pyk-2	ZK593.1
+glycolisis	WBGene00010791	sodh-2	K12G11.4
+oxidative phosphroylation	WBGene00019880	R05D3.6	R05D3.6
+oxidative phosphroylation	WBGene00022380	Y94H6A.8	Y94H6A.8
+oxidative phosphroylation	WBGene00000210	asg-2	C53B7.4
+oxidative phosphroylation	WBGene00007385	atp-5	C06H2.1
+oxidative phosphroylation	WBGene00001520	gas-1	K09A9.5
+oxidative phosphroylation	WBGene00002162	isp-1	F42G8.12
+oxidative phosphroylation	WBGene00003225	mev-1	T07C4.7
+oxidative phosphroylation	WBGene00006463	nduf-2.2	T26A5.3
+oxidative phosphroylation	WBGene00012376	nduf-7	W10D5.2
+oxidative phosphroylation	WBGene00019401	nuo-4	K04G7.4
+oxidative phosphroylation	WBGene00021562	nuo-5	Y45G12B.1
+oxidative phosphroylation	WBGene00012166	nuo-6	W01A8.4
+oxidative phosphroylation	WBGene00015391	sdha-1	C03G5.1
+oxidative phosphroylation	WBGene00016392	sdha-2	C34B2.7
+oxidative phosphroylation	WBGene00009353	sdhd-1	F33A8.5
+oxidative phosphroylation	WBGene00012158	ucr-2.1	VW06B3R.1
+oxidative phosphroylation	WBGene00011679	ucr-2.2	T10B10.2
+oxidative phosphroylation	WBGene00006919	vha-10	F46F11.5
+oxidative phosphroylation	WBGene00006920	vha-11	Y38F2AL.3
+oxidative phosphroylation	WBGene00006914	vha-5	F35H10.4
+cellular lipid metabolism	WBGene00020366	acdh-10	T08G2.3
+cellular lipid metabolism	WBGene00010339	acl-1	F59F4.4
+cellular lipid metabolism	WBGene00000081	ads-1	Y50D7A.7
+cellular lipid metabolism	WBGene00000211	asm-1	B0252.2
+cellular lipid metabolism	WBGene00011517	cgt-1	T06C12.10
+cellular lipid metabolism	WBGene00000509	cka-1	C28D4.2
+cellular lipid metabolism	WBGene00000514	ckb-4	F22F7.5
+cellular lipid metabolism	WBGene00000761	coq-1	C24A11.9
+cellular lipid metabolism	WBGene00010794	dld-1	LLC1.3
+cellular lipid metabolism	WBGene00001240	elo-2	F11E6.5
+cellular lipid metabolism	WBGene00001241	elo-3	D2024.3
+cellular lipid metabolism	WBGene00001396	fat-4	T13F2.1
+cellular lipid metabolism	WBGene00001397	fat-5	W06D12.3
+cellular lipid metabolism	WBGene00021160	gba-4	Y4C6B.6
+cellular lipid metabolism	WBGene00002044	hyl-2	K02G10.6
+cellular lipid metabolism	WBGene00019460	idi-1	K06H7.9
+cellular lipid metabolism	WBGene00018990	klf-1	F56F11.3
+cellular lipid metabolism	WBGene00010408	mboa-2	H19N07.4
+cellular lipid metabolism	WBGene00003475	mtm-1	Y110A7A.5
+cellular lipid metabolism	WBGene00020647	pqbp-1.1	T21D12.3
+cellular lipid metabolism	WBGene00004879	smg-1	C48B6.6
+cellular lipid metabolism	WBGene00004893	sms-2	F53H8.4
+cellular lipid metabolism	WBGene00007918	sphk-1	C34C6.5
+cellular lipid metabolism	WBGene00011932	sptl-3	T22G5.5
+cellular lipid metabolism	WBGene00006351	sur-5	K03A1.5
+TCA	WBGene00007150	acly-2	B0365.1
+TCA	WBGene00000041	aco-2	F54H12.1
+TCA	WBGene00007824	C30H6.7	C30H6.7
+TCA	WBGene00009082	dlat-1	F23B12.5
+TCA	WBGene00010794	dld-1	LLC1.3
+TCA	WBGene00020950	dlst-1	W02F12.5
+TCA	WBGene00009664	idha-1	F43G9.1
+TCA	WBGene00009440	idhg-1	F35G12.2
+TCA	WBGene00003162	mdh-2	F20H11.3
+TCA	WBGene00003225	mev-1	T07C4.7
+TCA	WBGene00020679	ogdh-1	T22B11.5
+TCA	WBGene00011510	pdha-1	T05H10.6
+TCA	WBGene00015413	pdhb-1	C04C3.3
+TCA	WBGene00004258	pyc-1	D2023.2
+TCA	WBGene00015391	sdha-1	C03G5.1
+TCA	WBGene00016392	sdha-2	C34B2.7
+TCA	WBGene00009353	sdhd-1	F33A8.5
+TCA	WBGene00009812	suca-1	F47B10.1
+TCA	WBGene00016844	sucg-1	C50F7.4
+TCA	WBGene00007350	sucl-1	C05G5.4
+Organelle(ER)	WBGene00007696	tram-1	C24F3.1
+Organelle(ER)	WBGene00011638	ostb-1	T09A5.11
+Organelle(ER)	WBGene00000221	atf-5	T04C10.4
+Organelle(ER)	WBGene00004823	skr-17	C06A8.4
+Organelle(ER)	WBGene00001019	dnj-1	B0035.14
+Organelle(ER)	WBGene00002071	ile-2	T04G9.3
+Organelle(ER)	WBGene00018604	uggt-1	F48E3.3
+Organelle(ER)	WBGene00022450	ubc-26	Y110A2AM.3
+Organelle(ER)	WBGene00006446	atx-3	F28F8.6
+Organelle(ER)	WBGene00013225	Y56A3A.2	Y56A3A.2
+Organelle(ER)	WBGene00013924	rad-23	ZK20.3
+Organelle(ER)	WBGene00003806	npp-20	Y77E11A.13
+Organelle(ER)	WBGene00001025	dnj-7	C55B6.2
+Organelle(ER)	WBGene00010562	cdc-48.3	K04G2.3
+Organelle(ER)	WBGene00006710	ubc-15	Y110A2AR.2
+Organelle(ER)	WBGene00004810	skr-4	Y60A3A.18
+Organelle(ER)	WBGene00008714	F11F1.1	F11F1.1
+Organelle(ER)	WBGene00004826	skr-20	R12H7.5
+Organelle(ER)	WBGene00004809	skr-3	F44G3.6
+Organelle(ER)	WBGene00002178	jnk-1	B0478.1
+Organelle(ER)	WBGene00002026	hsp-70	C12C8.1
+Organelle(golgi)	WBGene00001645	gly-20	gly-20
+Organelle(golgi)	WBGene00007528	C11H1.2	C11H1.2
+Organelle(golgi)	WBGene00003253	mig-22	mig-22
+Organelle(golgi)	WBGene00010713	uso-1	uso-1
+Organelle(golgi)	WBGene00013551	Y75B8A.16	Y75B8A.16
+Organelle(golgi)	WBGene00043986	fut-5	fut-5
+Organelle(golgi)	WBGene00001627	gly-2	gly-2
+Organelle(golgi)	WBGene00001638	gly-13	gly-13
+Organelle(golgi)	WBGene00006308	sul-1	sul-1
+Organelle(golgi)	WBGene00003818	nsf-1	nsf-1
+Organelle(golgi)	WBGene00022721	ugtp-1	ugtp-1
+Organelle(golgi)	WBGene00001637	gly-12	gly-12
+Organelle(golgi)	WBGene00001505	fut-1	fut-1
+Organelle(golgi)	WBGene00004269	rab-6.1	rab-6.1
+Organelle(golgi)	WBGene00013737	tpst-1	tpst-1
+Organelle(golgi)	WBGene00017174	tat-6	tat-6
+Organelle(golgi)	WBGene00008018	tbc-8	tbc-8
+Organelle(golgi)	WBGene00001639	gly-14	gly-14
+Organelle(golgi)	WBGene00011083	glo-1	glo-1
+Organelle(golgi)	WBGene00012532	crp-1	crp-1
+Organelle(mitochondria)	WBGene00021935	mrpl-46	Y55F3BL.1
+Organelle(mitochondria)	WBGene00009128	mrpl-54	F25H5.6
+Organelle(mitochondria)	WBGene00017119	E04A4.5	E04A4.5
+Organelle(mitochondria)	WBGene00022373	mrpl-15	Y92H12BR.8
+Organelle(mitochondria)	WBGene00009734	F45G2.8	F45G2.8
+Organelle(mitochondria)	WBGene00015133	mrpl-11	B0303.15
+Organelle(mitochondria)	WBGene00016412	mrps-26	C34E10.11
+Organelle(mitochondria)	WBGene00011391	mrps-12	T03D8.2
+Organelle(mitochondria)	WBGene00008769	mrpl-13	F13G3.11
+Organelle(mitochondria)	WBGene00022045	mrpl-55	Y66H1A.3
+Organelle(mitochondria)	WBGene00011759	mrps-18B	T13H5.5
+Organelle(mitochondria)	WBGene00017319	mrps-9	F09G8.3
+Organelle(mitochondria)	WBGene00020717	mrpl-4	T23B12.2
+Organelle(mitochondria)	WBGene00007686	tomm-40	C18E9.6
+Organelle(mitochondria)	WBGene00012697	mrps-35	Y39B6A.39
+Organelle(mitochondria)	WBGene00016249	mrpl-32	C30C11.1
+Organelle(mitochondria)	WBGene00007564	mrps-22	C14A4.14
+Organelle(mitochondria)	WBGene00011883	mrpl-50	T21B10.1
+Organelle(nucleus)	WBGene00018474	scpl-2	F45E12.1
+Organelle(nucleus)	WBGene00001867	him-8	T07G12.12
+Organelle(nucleus)	WBGene00009141	ncbp-2	F26A3.2
+Organelle(nucleus)	WBGene00006311	sun-1	F57B1.2
+Organelle(nucleus)	WBGene00003787	npp-1	K07F5.13
+Organelle(nucleus)	WBGene00003834	nxf-1	C15H11.3
+Organelle(nucleus)	WBGene00003805	npp-19	R06F6.5
+Organelle(nucleus)	WBGene00017066	maco-1	D2092.5
+Organelle(nucleus)	WBGene00003801	npp-15	C29E4.4
+Organelle(nucleus)	WBGene00006997	zyg-12	ZK546.1
+Organelle(nucleus)	WBGene00000151	apn-1	T05H10.2
+Organelle(nucleus)	WBGene00001852	hil-1	C30G7.1
+Organelle(nucleus)	WBGene00011111	snfc-5	R07E5.3
+Organelle(nucleus)	WBGene00001898	his-24	M163.3
+Organelle(nucleus)	WBGene00016992	zhit-1	CD4.7
+Organelle(nucleus)	WBGene00001915	his-41	C50F4.5
+Organelle(lysosome)	WBGene00006912	vha-3	Y38F2AL.4
+Organelle(lysosome)	WBGene00007056	crn-7	F09G8.2
+Organelle(lysosome)	WBGene00018877	aman-1	F55D10.1
+Organelle(lysosome)	WBGene00000539	cln-3.1	F07B10.1
+Organelle(lysosome)	WBGene00011832	T19B10.3	T19B10.3
+Organelle(lysosome)	WBGene00021814	Y53G8AR.7	Y53G8AR.7
+Organelle(lysosome)	WBGene00020509	hex-1	T14F9.3
+Organelle(lysosome)	WBGene00000783	cpr-3	T10H4.12
+Organelle(lysosome)	WBGene00006914	vha-5	F35H10.4
+Organelle(lysosome)	WBGene00006910	vha-1	R10E11.8
+Organelle(lysosome)	WBGene00016335	gba-1	C33C12.3
+Organelle(lysosome)	WBGene00019867	R04B3.2	R04B3.2
+Organelle(lysosome)	WBGene00007904	C33G3.4	C33G3.4
+Organelle(lysosome)	WBGene00021952	vha-19	Y55H10A.1
+Organelle(lysosome)	WBGene00021160	gba-4	Y4C6B.6
+Organelle(lysosome)	WBGene00010769	asah-1	K11D2.2
+Organelle(lysosome)	WBGene00006768	unc-32	ZK637.8
+Organelle(lysosome)	WBGene00016258	vha-16	C30F8.2
+Organelle(lysosome)	WBGene00020507	vha-15	T14F9.1
+Organelle(lysosome)	WBGene00000789	cpz-2	M04G12.2
+Other(proteasome)	WBGene00003928	pas-7	C15H11.7
+Other(proteasome)	WBGene00003947	pbs-1	T20F5.2
+Other(proteasome)	WBGene00003948	pbs-2	C52E4.4
+Other(proteasome)	WBGene00003949	pbs-3	Y119D3B.15
+Other(proteasome)	WBGene00003950	pbs-4	C36B1.4
+Other(proteasome)	WBGene00003951	pbs-5	C23G10.4
+Other(proteasome)	WBGene00003952	pbs-6	B0205.3
+Other(proteasome)	WBGene00003953	pbs-7	C02F5.9
+Other(proteasome)	WBGene00004458	rpn-1	T06D8.8
+Other(proteasome)	WBGene00004466	rpn-10	F39H11.5
+Other(proteasome)	WBGene00004467	rpn-11	F57B9.10
+Other(proteasome)	WBGene00004468	rpn-12	F10G7.8
+Other(proteasome)	WBGene00004459	rpn-2	ZK20.5
+Other(locomotion)	WBGene00000068	acy-1	F17C8.1
+Other(locomotion)	WBGene00007119	calf-1	B0250.2
+Other(locomotion)	WBGene00086546	cil-1	C50C3.7
+Other(locomotion)	WBGene00000894	dab-1	M110.5
+Other(locomotion)	WBGene00001116	dyc-1	C33G3.1
+Other(locomotion)	WBGene00001179	egl-10	F28C1.2
+Other(locomotion)	WBGene00011904	hlb-1	T21H8.1
+Other(locomotion)	WBGene00003558	nca-2	C27F2.2
+Other(locomotion)	WBGene00003919	par-4	Y59A8B.14
+Other(locomotion)	WBGene00003929	pat-2	F54F2.1
+Other(locomotion)	WBGene00004316	rbf-1	F37A4.7
+Other(locomotion)	WBGene00004357	rho-1	Y51H4A.3
+Other(locomotion)	WBGene00004909	snf-10	Y32F6A.2
+Other(locomotion)	WBGene00004905	snf-6	M01G5.5
+Other(locomotion)	WBGene00006772	unc-36	C50C3.9
+Other(locomotion)	WBGene00006777	unc-41	C27H6.1
+Other(locomotion)	WBGene00006788	unc-53	F45E10.1
+Other(locomotion)	WBGene00006809	unc-77	C11D2.6
+Other(locomotion)	WBGene00006811	unc-79	E03A3.6
+Other(locomotion)	WBGene00006812	unc-80	F25C8.3
+Other(penthosephosphate)	WBGene00008230	C50F4.2	C50F4.2
+Other(penthosephosphate)	WBGene00007108	gspd-1	B0035.5
+Other(penthosephosphate)	WBGene00017272	F08F8.7	F08F8.7
+Other(penthosephosphate)	WBGene00017818	F26D11.1	F26D11.1
+Other(penthosephosphate)	WBGene00022199	Y71H10A.1	Y71H10A.1
+Other(penthosephosphate)	WBGene00021286	Y24D9A.8	Y24D9A.8
+Other(penthosephosphate)	WBGene00017283	F09E5.3	F09E5.3
+Other(penthosephosphate)	WBGene00011474	aldo-1	T05D4.1
+Other(penthosephosphate)	WBGene00012015	T25B9.9	T25B9.9
+Other(penthosephosphate)	WBGene00020107	R151.2	R151.2
