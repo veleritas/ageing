@@ -1,0 +1,330 @@
+go_id	go_name	num_seq	rsq_pile	score
+GO:0000041	transition metal ion transport	22	70.35	1.3376202088955582
+GO:0000165	MAPK cascade	33	85.00999999999998	1.0109357376986443
+GO:0000303	response to superoxide	12	38.88	1.1830057459003045
+GO:0000305	response to oxygen radical	12	38.88	1.1830057459003045
+GO:0000323	lytic vacuole	77	84.68	2.0159027578179227
+GO:0000723	telomere maintenance	18	68.69	4.484619201402894
+GO:0000737	DNA catabolic process, endonucleolytic	13	95.48	1.8442809207429158
+GO:0000922	spindle pole	18	24.04	0.19328760570910464
+GO:0001556	oocyte maturation	13	93.81	1.8816851487017567
+GO:0001704	formation of primary germ layer	25	70.67	0.9662297028966867
+GO:0001711	endodermal cell fate commitment	14	39.55	0.3528763064628789
+GO:0001845	phagolysosome assembly	10	83.08	1.0033117210634033
+GO:0001933	negative regulation of protein phosphorylation	22	83.45	1.9310955091855957
+GO:0002376	immune system process	219	95.6	3.4031259238327767
+GO:0002682	regulation of immune system process	11	94.93	2.1633066655978204
+GO:0003333	amino acid transmembrane transport	23	32.75	1.2495892581384929
+GO:0005576	extracellular region	311	95.93	5.028262541192816
+GO:0005578	proteinaceous extracellular matrix	39	35.35	0.8623389172324452
+GO:0005581	collagen trimer	19	10.36	1.2703769659743438
+GO:0005604	basement membrane	20	19.64	0.24603967694632545
+GO:0005615	extracellular space	150	68.77	2.694124528808897
+GO:0005764	lysosome	76	84.25	2.048346945381863
+GO:0005765	lysosomal membrane	19	1.37	0.034813824631414435
+GO:0005773	vacuole	116	87.24	1.5078567658673971
+GO:0005774	vacuolar membrane	53	3.15	0.033088894700616364
+GO:0005795	Golgi stack	28	78.36	2.135681131320422
+GO:0005797	Golgi medial cisterna	10	74.74	3.153440630520116
+GO:0005802	trans-Golgi network	15	41.66	0.3610167078233459
+GO:0005813	centrosome	59	43.08	0.4066916066336545
+GO:0005818	aster	14	94.23	1.3331073822454884
+GO:0005869	dynactin complex	10	12.76	0.12607354282295524
+GO:0005871	kinesin complex	21	26.46	0.654081340391091
+GO:0005874	microtubule	75	26.19	0.9955418157068692
+GO:0005876	spindle microtubule	21	51.98	0.3705801216233208
+GO:0005911	cell-cell junction	41	84.68	1.34632442273253
+GO:0005996	monosaccharide metabolic process	78	94.26	1.5250562100437428
+GO:0006006	glucose metabolic process	16	63.69000000000001	0.6237673286633254
+GO:0006022	aminoglycan metabolic process	28	47.04	1.4514430698279164
+GO:0006026	aminoglycan catabolic process	13	17.4	1.2971017270263239
+GO:0006030	chitin metabolic process	18	63.28	1.985595478557289
+GO:0006032	chitin catabolic process	10	10.53	0.9349038541856252
+GO:0006040	amino sugar metabolic process	29	64.1	1.784243423937019
+GO:0006063	uronic acid metabolic process	49	95.09	1.6767316963043164
+GO:0006082	organic acid metabolic process	345	96.12	1.4143506868209768
+GO:0006171	cAMP biosynthetic process	11	25.69	1.091056819003482
+GO:0006298	mismatch repair	10	84.50999999999998	2.9991221727878066
+GO:0006308	DNA catabolic process	20	81.6	0.8943132794452504
+GO:0006309	apoptotic DNA fragmentation	11	91.48	1.6629136909540685
+GO:0006323	DNA packaging	25	98.14	2.016277154376452
+GO:0006333	chromatin assembly or disassembly	18	89.23	1.2316085677521398
+GO:0006334	nucleosome assembly	15	93.0	1.4152048430155078
+GO:0006403	RNA localization	32	86.61	1.2551277629686053
+GO:0006405	RNA export from nucleus	11	21.8	0.15891702507905892
+GO:0006469	negative regulation of protein kinase activity	16	87.55	2.600588360002375
+GO:0006470	protein dephosphorylation	118	77.88000000000002	1.6014050908619266
+GO:0006487	protein N-linked glycosylation	28	84.08	0.93985998741484
+GO:0006576	cellular biogenic amine metabolic process	28	92.03	1.222479825097691
+GO:0006739	NADP metabolic process	10	82.39999999999998	1.0793766861223533
+GO:0006805	xenobiotic metabolic process	20	98.07	1.7144865569067356
+GO:0006825	copper ion transport	10	74.56	1.9493859750905775
+GO:0006865	amino acid transport	27	29.98	1.0251725810474586
+GO:0006869	lipid transport	45	83.38	2.546384299112291
+GO:0006887	exocytosis	53	60.49	1.1722520749015404
+GO:0006904	vesicle docking involved in exocytosis	19	91.75	1.9830169833137825
+GO:0006913	nucleocytoplasmic transport	54	71.64	1.2639205302548788
+GO:0006921	cellular component disassembly involved in execution phase of apoptosis	11	91.48	1.6629136909540685
+GO:0006935	chemotaxis	118	15.42	0.14107991899187955
+GO:0006937	regulation of muscle contraction	15	30.35	0.24623626152421846
+GO:0006952	defense response	303	95.85	8.232117206559636
+GO:0006955	immune response	217	95.31	3.376927459989084
+GO:0006972	hyperosmotic response	12	23.19	0.6537279740422858
+GO:0006979	response to oxidative stress	63	81.17999999999998	1.1335657716884826
+GO:0006986	response to unfolded protein	53	75.3	5.112175165497403
+GO:0006998	nuclear envelope organization	10	84.07	1.1061497082484473
+GO:0007009	plasma membrane organization	33	19.55	1.1663253282928845
+GO:0007018	microtubule-based movement	47	52.09	1.0822807371549898
+GO:0007020	microtubule nucleation	10	49.87	0.4159086640428593
+GO:0007029	endoplasmic reticulum organization	11	81.27	0.9786991827927288
+GO:0007098	centrosome cycle	11	56.92	0.7877692983927341
+GO:0007416	synapse assembly	10	73.02	0.9282628225305768
+GO:0007517	muscle organ development	25	87.92	1.4123100862273683
+GO:0007617	mating behavior	36	46.48	1.0725248312488107
+GO:0007618	mating	40	60.12	1.2169080469097844
+GO:0007638	mechanosensory behavior	23	10.11	0.188469407096627
+GO:0008021	synaptic vesicle	18	71.55	1.4321556492158825
+GO:0008284	positive regulation of cell proliferation	10	76.53	1.4810282011845308
+GO:0008286	insulin receptor signaling pathway	10	64.36	1.1714915958190082
+GO:0008645	hexose transport	15	42.38	1.0467268503114326
+GO:0009084	glutamine family amino acid biosynthetic process	10	33.27	0.9976739361851104
+GO:0009187	cyclic nucleotide metabolic process	11	25.69	1.091056819003482
+GO:0009190	cyclic nucleotide biosynthetic process	11	25.69	1.091056819003482
+GO:0009266	response to temperature stimulus	50	74.24	5.191809560301837
+GO:0009306	protein secretion	19	90.45	2.2171200524848844
+GO:0009308	amine metabolic process	29	90.49	1.132892494536025
+GO:0009311	oligosaccharide metabolic process	21	83.08	0.9153496448224534
+GO:0009314	response to radiation	37	89.64999999999998	2.2344246881440917
+GO:0009408	response to heat	43	80.54	5.579559367470049
+GO:0009410	response to xenobiotic stimulus	22	97.79	1.655608160609586
+GO:0009411	response to UV	17	33.45	0.21977682459519776
+GO:0009416	response to light stimulus	17	33.45	0.21977682459519776
+GO:0009605	response to external stimulus	290	73.8	1.8925192690549817
+GO:0009607	response to biotic stimulus	105	95.06	6.274460779746032
+GO:0009617	response to bacterium	96	98.56	7.0327516405445065
+GO:0009620	response to fungus	15	40.3	3.304424645086536
+GO:0009628	response to abiotic stimulus	132	83.59	3.385652209239886
+GO:0009812	flavonoid metabolic process	49	95.09	1.6767316963043164
+GO:0009813	flavonoid biosynthetic process	49	95.09	1.6767316963043164
+GO:0009886	post-embryonic morphogenesis	19	85.11	1.8041477278028148
+GO:0009894	regulation of catabolic process	71	94.47	1.4325495753653716
+GO:0009895	negative regulation of catabolic process	12	96.06	2.5970529789317585
+GO:0010165	response to X-ray	11	12.659999999999998	0.11182989968637456
+GO:0010212	response to ionizing radiation	25	74.58	1.86730206538802
+GO:0010243	response to organonitrogen compound	27	66.03999999999999	1.235153278784072
+GO:0010332	response to gamma radiation	10	80.06	3.2482138022406675
+GO:0010466	negative regulation of peptidase activity	38	6.48	0.1252714721389308
+GO:0010506	regulation of autophagy	22	35.95	0.6403410699168671
+GO:0010563	negative regulation of phosphorus metabolic process	33	73.36	1.5877424023647484
+GO:0010721	negative regulation of cell development	11	37.0	0.5036298943116849
+GO:0010769	regulation of cell morphogenesis involved in differentiation	21	68.91000000000001	0.8953344562298488
+GO:0010921	regulation of phosphatase activity	10	82.26	0.9806522427490344
+GO:0010970	establishment of localization by movement along microtubule	21	22.84	0.9145516454754856
+GO:0010975	regulation of neuron projection development	25	81.24	1.0820131037734757
+GO:0015630	microtubule cytoskeleton	156	69.28	0.9606485265501304
+GO:0015748	organophosphate ester transport	21	74.22	1.0391805836541574
+GO:0015749	monosaccharide transport	15	42.38	1.0467268503114326
+GO:0015758	glucose transport	15	42.38	1.0467268503114326
+GO:0015914	phospholipid transport	11	84.02	1.771122440212988
+GO:0016241	regulation of macroautophagy	11	17.990000000000006	0.4137757550983613
+GO:0016311	dephosphorylation	125	76.82	1.4017597321603006
+GO:0016323	basolateral plasma membrane	23	31.93	0.5334985366696118
+GO:0016324	apical plasma membrane	43	17.73	0.39402175251536864
+GO:0016331	morphogenesis of embryonic epithelium	13	40.21	0.4244967105314864
+GO:0016471	vacuolar proton-transporting V-type ATPase complex	12	20.86	0.20337718097519286
+GO:0017144	drug metabolic process	20	98.07	1.7144865569067356
+GO:0017156	calcium ion regulated exocytosis	27	57.05	0.8764640285068632
+GO:0019318	hexose metabolic process	26	92.43	1.2384264809125143
+GO:0019359	nicotinamide nucleotide biosynthetic process	10	77.92	0.7387464079319046
+GO:0019585	glucuronate metabolic process	49	95.09	1.6767316963043164
+GO:0019752	carboxylic acid metabolic process	316	17.599999999999994	0.08860250337567202
+GO:0021700	developmental maturation	22	86.39	1.1988500890699545
+GO:0022406	membrane docking	29	91.79	1.5846979869046387
+GO:0022611	dormancy process	39	40.26	1.0397595335189762
+GO:0030261	chromosome condensation	10	79.41	0.9618711830237792
+GO:0030262	apoptotic nuclear changes	11	91.48	1.6629136909540685
+GO:0030433	ER-associated ubiquitin-dependent protein catabolic process	23	57.4	0.4113709366259774
+GO:0030496	midbody	11	96.78	1.7683342197631482
+GO:0030516	regulation of axon extension	12	75.05	1.299588889509376
+GO:0030705	cytoskeleton-dependent intracellular transport	23	27.450000000000006	0.9299778765753464
+GO:0030855	epithelial cell differentiation	10	94.75	2.153404642967048
+GO:0030863	cortical cytoskeleton	10	56.09	1.0387721462284771
+GO:0030864	cortical actin cytoskeleton	10	56.09	1.0387721462284771
+GO:0030968	endoplasmic reticulum unfolded protein response	47	75.86	5.731901514207165
+GO:0031023	microtubule organizing center organization	14	79.89	1.2656177821957466
+GO:0031122	cytoplasmic microtubule organization	14	80.33	0.9495407761944152
+GO:0031201	SNARE complex	22	69.92	0.9393836156121472
+GO:0031253	cell projection membrane	19	33.96	0.7927570478198194
+GO:0031329	regulation of cellular catabolic process	61	90.56	1.24927509752601
+GO:0031330	negative regulation of cellular catabolic process	12	96.06	2.5970529789317585
+GO:0031331	positive regulation of cellular catabolic process	27	33.989999999999995	0.5818635240468113
+GO:0031347	regulation of defense response	10	74.45	1.2460908858590891
+GO:0031400	negative regulation of protein modification process	27	78.4	1.6403540525049092
+GO:0031497	chromatin assembly	15	93.0	1.4152048430155078
+GO:0031503	protein complex localization	14	66.38	1.9492898186964092
+GO:0031667	response to nutrient levels	41	42.21	0.3475395970054229
+GO:0031668	cellular response to extracellular stimulus	22	19.17	0.4178837895576395
+GO:0031984	organelle subcompartment	44	65.14	1.2297516586647532
+GO:0031985	Golgi cisterna	24	76.02	2.165442366353499
+GO:0032101	regulation of response to external stimulus	30	68.13	0.9128463398122654
+GO:0032103	positive regulation of response to external stimulus	10	76.67	1.444292711990135
+GO:0032107	regulation of response to nutrient levels	11	17.990000000000006	0.4137757550983613
+GO:0032200	telomere organization	18	68.69	4.484619201402894
+GO:0032222	regulation of synaptic transmission, cholinergic	13	42.43	0.8890810022027298
+GO:0032224	positive regulation of synaptic transmission, cholinergic	12	41.28	0.9540976848517772
+GO:0032392	DNA geometric change	32	68.37	3.8689646890200855
+GO:0032482	Rab protein signal transduction	23	67.19000000000001	1.5491883907541149
+GO:0032508	DNA duplex unwinding	32	68.37	3.8689646890200855
+GO:0032868	response to insulin	12	56.34	0.888972132201862
+GO:0032869	cellular response to insulin stimulus	12	56.34	0.888972132201862
+GO:0033673	negative regulation of kinase activity	16	87.55	2.600588360002375
+GO:0034599	cellular response to oxidative stress	11	97.61	2.251134754340399
+GO:0034606	response to hermaphrodite contact	20	56.74	1.4772290060886242
+GO:0034608	vulval location	15	13.66	0.8013828371479741
+GO:0034620	cellular response to unfolded protein	52	75.03	5.306355170387494
+GO:0034728	nucleosome organization	18	98.14	1.9675950726376297
+GO:0034976	response to endoplasmic reticulum stress	77	47.87000000000001	4.172996412049184
+GO:0035239	tube morphogenesis	19	73.37	1.0161772686331938
+GO:0035264	multicellular organism growth	10	75.42	1.119472685109883
+GO:0035303	regulation of dephosphorylation	12	85.46000000000002	1.0807389468223996
+GO:0035304	regulation of protein dephosphorylation	12	85.46000000000002	1.0807389468223996
+GO:0035335	peptidyl-tyrosine dephosphorylation	47	88.58	2.094535635154757
+GO:0035428	hexose transmembrane transport	15	42.38	1.0467268503114326
+GO:0035966	response to topologically incorrect protein	64	72.97	4.6314894413011976
+GO:0035967	cellular response to topologically incorrect protein	57	68.87	5.463851805924332
+GO:0035987	endodermal cell differentiation	14	39.55	0.3528763064628789
+GO:0036064	ciliary basal body	13	7.380000000000001	0.10631004390431883
+GO:0036065	fucosylation	11	24.16	1.139397359400821
+GO:0036293	response to decreased oxygen levels	11	40.43	0.32448659122931606
+GO:0040032	post-embryonic body morphogenesis	12	91.41	1.9047910134183708
+GO:0040034	regulation of development, heterochronic	16	34.84	0.9438621710340378
+GO:0042176	regulation of protein catabolic process	47	84.07	0.9052504044798132
+GO:0042177	negative regulation of protein catabolic process	10	74.67	1.3967626500110073
+GO:0042326	negative regulation of phosphorylation	23	87.03	2.0066882080238266
+GO:0042439	ethanolamine-containing compound metabolic process	18	88.44999999999997	1.2311500165154954
+GO:0042493	response to drug	33	99.3	2.156076575240156
+GO:0042659	regulation of cell fate specification	20	22.97	0.38381498134448
+GO:0042737	drug catabolic process	20	98.07	1.7144865569067356
+GO:0042738	exogenous drug catabolic process	20	98.07	1.7144865569067356
+GO:0042742	defense response to bacterium	94	98.12	6.805197149329095
+GO:0043053	dauer entry	30	50.16	1.368747891059483
+GO:0043086	negative regulation of catalytic activity	71	17.59	0.9767789024177528
+GO:0043171	peptide catabolic process	10	14.510000000000002	1.7381761213809277
+GO:0043207	response to external biotic stimulus	105	95.06	6.274460779746032
+GO:0043405	regulation of MAP kinase activity	21	66.24	1.5439759353254183
+GO:0043409	negative regulation of MAPK cascade	10	83.0	2.805056681649277
+GO:0043434	response to peptide hormone	12	56.34	0.888972132201862
+GO:0044057	regulation of system process	19	20.66	0.8905610686200587
+GO:0044092	negative regulation of molecular function	77	15.75	0.9485171847027716
+GO:0044106	cellular amine metabolic process	28	92.03	1.222479825097691
+GO:0044420	extracellular matrix component	22	52.11	1.121042830661942
+GO:0044421	extracellular region part	181	64.37	2.400657764978684
+GO:0044450	microtubule organizing center part	16	90.24	1.7093531022976622
+GO:0044705	multi-organism reproductive behavior	36	46.48	1.0725248312488107
+GO:0045087	innate immune response	214	96.39	3.4289368418578747
+GO:0045121	membrane raft	57	70.78	4.731546063109741
+GO:0045138	nematode male tail tip morphogenesis	60	79.36	1.3322525502972802
+GO:0045216	cell-cell junction organization	10	57.27	1.0331689288500303
+GO:0045595	regulation of cell differentiation	74	72.38	0.9065305070684546
+GO:0045597	positive regulation of cell differentiation	12	96.91	2.091367890225122
+GO:0045732	positive regulation of protein catabolic process	19	72.99	0.7653420521386487
+GO:0045936	negative regulation of phosphate metabolic process	33	73.36	1.5877424023647484
+GO:0046058	cAMP metabolic process	11	25.69	1.091056819003482
+GO:0046323	glucose import	15	42.38	1.0467268503114326
+GO:0046348	amino sugar catabolic process	10	10.53	0.9349038541856252
+GO:0046394	carboxylic acid biosynthetic process	82	3.43	0.05860098638937598
+GO:0046395	carboxylic acid catabolic process	56	49.57	0.3201746237573469
+GO:0046580	negative regulation of Ras protein signal transduction	12	50.9	0.9652081596444556
+GO:0046661	male sex differentiation	68	73.42	1.0321054796677025
+GO:0046686	response to cadmium ion	15	68.55	0.9679375490617692
+GO:0046688	response to copper ion	13	50.54	1.7645981576800165
+GO:0046928	regulation of neurotransmitter secretion	13	68.47999999999999	0.9370159599645356
+GO:0048278	vesicle docking	26	92.37	1.6169374878322769
+GO:0048469	cell maturation	22	86.39	1.1988500890699545
+GO:0048546	digestive tract morphogenesis	16	76.75	1.2420474652028146
+GO:0048557	embryonic digestive tract morphogenesis	10	29.04	0.2290268716839116
+GO:0048565	digestive tract development	56	82.76	0.9181920821367996
+GO:0048566	embryonic digestive tract development	12	77.42999999999998	0.8807551777359047
+GO:0050657	nucleic acid transport	30	85.55	1.2855212015859483
+GO:0050658	RNA transport	30	85.55	1.2855212015859483
+GO:0050767	regulation of neurogenesis	32	77.84	1.028585820027489
+GO:0050770	regulation of axonogenesis	16	80.58999999999997	1.2891105444068902
+GO:0050776	regulation of immune response	10	91.54	2.021019667037607
+GO:0050829	defense response to Gram-negative bacterium	73	96.57	5.475701264258738
+GO:0050830	defense response to Gram-positive bacterium	29	78.33	5.095587376630719
+GO:0050832	defense response to fungus	14	67.57	2.8634525384442133
+GO:0050920	regulation of chemotaxis	12	59.5	0.9048117707729808
+GO:0051028	mRNA transport	18	20.9	0.1395394757401606
+GO:0051058	negative regulation of small GTPase mediated signal transduction	12	50.9	0.9652081596444556
+GO:0051168	nuclear export	14	29.17	0.29196564246970713
+GO:0051169	nuclear transport	55	65.29	1.1512094269251234
+GO:0051233	spindle midzone	15	17.21	0.1210275722788326
+GO:0051236	establishment of RNA localization	30	85.55	1.2855212015859483
+GO:0051258	protein polymerization	30	50.94	1.6199751428205584
+GO:0051259	protein oligomerization	30	83.42	3.330713428108515
+GO:0051260	protein homooligomerization	26	83.91999999999999	3.6899136542866624
+GO:0051297	centrosome organization	14	79.89	1.2656177821957466
+GO:0051346	negative regulation of hydrolase activity	46	14.7	0.1939487099766407
+GO:0051348	negative regulation of transferase activity	17	87.26	2.5296579394659515
+GO:0051588	regulation of neurotransmitter transport	13	68.47999999999999	0.9370159599645356
+GO:0051707	response to other organism	105	95.06	6.274460779746032
+GO:0052652	cyclic purine nucleotide metabolic process	11	25.69	1.091056819003482
+GO:0052695	cellular glucuronidation	49	95.09	1.6767316963043164
+GO:0052696	flavonoid glucuronidation	49	95.09	1.6767316963043164
+GO:0055037	recycling endosome	18	31.180000000000003	1.2607596644769463
+GO:0055076	transition metal ion homeostasis	13	55.48	1.1169205757248135
+GO:0055115	entry into diapause	30	50.16	1.368747891059483
+GO:0055123	digestive system development	56	82.76	0.9181920821367996
+GO:0060179	male mating behavior	31	57.35	1.1138871887721942
+GO:0060249	anatomical structure homeostasis	22	74.6	3.702988170549548
+GO:0060429	epithelium development	56	80.0	0.9560795427578256
+GO:0060465	pharynx development	37	27.15	0.27503002420339906
+GO:0061065	regulation of dauer larval development	17	57.75	1.1770763291933493
+GO:0061387	regulation of extent of cell growth	13	77.64999999999998	1.287204129855698
+GO:0061512	protein localization to cilium	14	39.61	1.7641622250011717
+GO:0070382	exocytic vesicle	19	62.66	1.2264014673062886
+GO:0071103	DNA conformation change	62	64.0	2.259696947180676
+GO:0071359	cellular response to dsRNA	18	15.72	0.13605905937374885
+GO:0071375	cellular response to peptide hormone stimulus	12	56.34	0.888972132201862
+GO:0071417	cellular response to organonitrogen compound	15	48.29	0.6142614672027908
+GO:0071426	ribonucleoprotein complex export from nucleus	12	51.88	0.43250235811013465
+GO:0071466	cellular response to xenobiotic stimulus	20	98.07	1.7144865569067356
+GO:0071824	protein-DNA complex subunit organization	34	87.56	0.9831090804419828
+GO:0071897	DNA biosynthetic process	18	56.62000000000001	1.360468168849846
+GO:0071900	regulation of protein serine/threonine kinase activity	39	62.91	1.2425421236718264
+GO:0072523	purine-containing compound catabolic process	11	78.62	1.0275199438480578
+GO:0072525	pyridine-containing compound biosynthetic process	12	85.06	0.8965597763987909
+GO:0072593	reactive oxygen species metabolic process	10	43.4	1.0953603520149804
+GO:0072659	protein localization to plasma membrane	24	23.78	1.0408449698005582
+GO:0072686	mitotic spindle	17	41.8	0.29521966881964273
+GO:0080134	regulation of response to stress	46	80.19	0.9228921107444868
+GO:0090307	mitotic spindle assembly	13	85.49	0.9640468148571304
+GO:0090386	phagosome maturation involved in apoptotic cell clearance	13	87.69	1.1486587531351191
+GO:0090598	male anatomical structure morphogenesis	61	79.60000000000002	1.3024281622347451
+GO:0097035	regulation of membrane lipid distribution	10	90.26	1.5896026605286748
+GO:0097060	synaptic membrane	25	8.57	0.25736288006055197
+GO:0097499	protein localization to nonmotile primary cilium	12	39.08	1.961363201671819
+GO:0098542	defense response to other organism	102	91.99	6.356795139465237
+GO:0098589	membrane region	159	52.43	2.5663236646246137
+GO:0098754	detoxification	30	45.18	0.9005695525771571
+GO:0098791	Golgi subcompartment	41	70.16	1.3760670877000396
+GO:0098857	membrane microdomain	57	70.78	4.731546063109741
+GO:0098869	cellular oxidant detoxification	27	37.11	0.94426989704135
+GO:0099503	secretory vesicle	27	59.7	0.9627866685646168
+GO:1901071	glucosamine-containing compound metabolic process	20	61.67	1.7246966765474747
+GO:1901072	glucosamine-containing compound catabolic process	10	10.53	0.9349038541856252
+GO:1901652	response to peptide	13	58.10999999999999	0.9587881276331196
+GO:1901653	cellular response to peptide	12	56.34	0.888972132201862
+GO:1901698	response to nitrogen compound	45	71.89	1.125985303715876
+GO:1901701	cellular response to oxygen-containing compound	20	88.12	1.5096156351355972
+GO:1902850	microtubule cytoskeleton organization involved in mitosis	13	85.49	0.9640468148571304
+GO:1903050	regulation of proteolysis involved in cellular protein catabolic process	32	9.5	0.07703768516550508
+GO:1903362	regulation of cellular protein catabolic process	35	8.12	0.06157705121915912
+GO:1903364	positive regulation of cellular protein catabolic process	16	31.97	0.2513743201612933
+GO:1904029	regulation of cyclin-dependent protein kinase activity	21	91.17	1.3667205774838465
+GO:1904030	negative regulation of cyclin-dependent protein kinase activity	10	56.75	1.0426220918838722
+GO:1904659	glucose transmembrane transport	15	42.38	1.0467268503114326
+GO:1990267	response to transition metal nanoparticle	20	27.05	1.2396576664592196
+GO:1990748	cellular detoxification	27	37.11	0.94426989704135
+GO:1990778	protein localization to cell periphery	25	23.74	0.9601421765000868
+GO:2000116	regulation of cysteine-type endopeptidase activity	11	34.8	0.9615075166663666
